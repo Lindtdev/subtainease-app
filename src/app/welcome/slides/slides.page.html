@@ -1,0 +1,15 @@
+<ion-content [fullscreen]="true">
+  <div class="content d-flex">
+
+    <swiper-container #swiper [slidesPerView]="3" [loop]="true" effect="flip">
+      <swiper-slide>Slide 1</swiper-slide>
+      <swiper-slide>Slide 2</swiper-slide>
+      <swiper-slide>Slide 3</swiper-slide>
+    </swiper-container>
+    <ion-button (click)="redirectToWelcome()" >Start</ion-button>
+  </div>
+ 
+   
+ </ion-content>
+ 
+ <!-- <ion-button (click)="showLoader()">Show Loading</ion-button> -->

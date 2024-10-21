@@ -1,0 +1,93 @@
+.te{
+   
+}
+.df{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+}
+.text{
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.5;
+    
+}
+.description{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap:30px;
+}
+.text-btn{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+.element {
+  
+   padding-left: 40px;
+   padding-right: 40px;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap:36px;
+  height: 80%;
+  width: 100%;
+  background-image:url(../../../assets/Ellipse.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ion-button{
+  --background:#F5A200;
+  --color:white;
+   width: 300px;
+   height: 48px;
+  --background-hover:#F5A200;
+  --background-hover-opacity:0.5;
+  --background-activated:#F5A200 
+}
+
+
+
+ion-content{
+  --background:white ; 
+}
+
+ion-input{
+  --color: black;
+}
+
+.d-flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.title{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-image:url(../../../assets/bgMekit.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+
+}

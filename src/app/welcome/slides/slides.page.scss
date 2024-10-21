@@ -1,0 +1,40 @@
+.te{
+   
+  }
+
+  ion-button{
+    --background:#F5A200;
+    --color:white;
+     width: 300px;
+     height: 48px;
+    --background-hover:#F5A200;
+    --background-hover-opacity:0.5;
+    --background-activated:#F5A200 
+  }
+ 
+ 
+  
+  ion-content{
+    --background:#436A02 ; 
+  }
+
+  ion-input{
+    --color: black;
+  }
+  
+  .d-flex{
+    display: flex;
+    justify-content: space-between;
+  }
+ 
+  .content{
+    height: 100vh;
+    width: 100%;
+    background-image:url(../../../assets/bgMekit.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+
+  }
+  

@@ -1,0 +1,49 @@
+<!-- pack page -->
+<ion-content [fullscreen]="true">
+  <div class="content">
+   
+   
+    <div class="header-page">
+      <img src="../../../assets/logoLight.svg" alt="" srcset="">
+      <div class="title">Subscription</div>
+      <div class="description">Available packages: Choose a package to start publishing</div>
+
+    </div>
+
+    <div class="list-pack">
+      <div class="list-pack">
+        <app-souscription 
+          class="w-full" 
+          borderClass="border-junior" 
+          title="Pack Junior" 
+          price="3000Fcfa/mois" 
+          [details]="['10 publications par mois']">
+        </app-souscription>
+      
+        <app-souscription 
+          class="w-full" 
+          borderClass="border-silver" 
+          title="Pack Silver" 
+          price="5000Fcfa/mois" 
+          [details]="['25 publicités,Recommandations']">
+        </app-souscription>
+      
+        <app-souscription 
+          class="w-full" 
+          borderClass="border-gold" 
+          title="Pack Gold" 
+          price="12000Fcfa/mois" 
+          [details]="['30 publicités', 'Recommandations +++']">
+        </app-souscription>
+      </div>
+      
+    </div>
+   
+
+  
+      
+
+    
+
+  </div>
+</ion-content>

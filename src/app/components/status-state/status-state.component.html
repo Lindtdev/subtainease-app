@@ -1,0 +1,18 @@
+<div class="state-status" [ngClass]="{'echec': isError}">
+  <img [src]="imageSrc" alt="">
+
+  <div class="msg">
+    <div class="title-msg">{{ title }}</div>
+    <div class="text">{{ message }}</div>
+  </div>
+
+  <div *ngIf="isError" class="exclamation">
+    <div class="tiret"></div>
+    <div class="ex-msg">
+      <img src="../../../assets/Exclamation.svg" alt="">
+      <div class="text">{{ errorDetail }}</div>
+    </div>
+  </div>
+
+  <ion-button (click)="navigate()">{{ buttonText }}</ion-button>
+</div>

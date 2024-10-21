@@ -1,0 +1,39 @@
+<ion-content [fullscreen]="true">
+  <div class="content">
+   
+   
+    <div class="header-page">
+      <img src="../../../assets/logoLight.svg" alt="" srcset="">
+      <div class="title">Mode de paiement</div>
+      <div class="description">Choisissez un mode de paiement pour souscrire </div>
+
+    </div>
+
+    <div class="methode">
+      <ion-checkbox (ionChange)="onPaymentMethodChange('OM')" [checked]="selectedPaymentMethod === 'OM'">
+          <div class="mode">
+
+           <img src="../../../assets/OM.svg" alt="" srcset="">
+              OM
+
+          </div>
+          
+            
+        </ion-checkbox>
+
+        <ion-checkbox (ionChange)="onPaymentMethodChange('MOMO')" [checked]="selectedPaymentMethod === 'MOMO'">
+          <div class="mode">
+
+           <img src="../../../assets/MoMo.svg" alt="" srcset="">
+              
+             MOMO
+
+          </div>
+          
+            
+        </ion-checkbox>
+
+    </div>
+
+  </div>
+</ion-content>

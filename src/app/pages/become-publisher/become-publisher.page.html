@@ -1,0 +1,100 @@
+<ion-content [fullscreen]="true">
+  <div class="content">
+    <!-- <app-mekit-button class="menu-bar"></app-mekit-button> -->
+
+    <div class="header-page">
+      <img src="../../../assets/logoLight.svg" alt="" srcset="">
+      <div class="title">Devenez publieur</div>
+      <div class="description">Compleate your profil to be able to publish your ads.</div>
+
+    </div>
+
+    <div class="form">
+      <div class="input">
+        <div class="label">Nom de l’entreprise<span class="red">*</span> </div>
+
+        <div class="input-mekit">
+          <ion-input  color="warning" placeholder="Type your business name"></ion-input>
+        </div>
+      </div>
+      <div class="input">
+        <div class="label">N° d’immatriculation<span class="red">*</span> </div>
+        <div class="input-mekit">
+          <ion-input  color="warning" placeholder="Justificatif d’activité"></ion-input>
+        </div>
+      </div>
+
+      <div class="input">
+        <div class="label">Secteur d’activité <span class="red">*</span> </div>
+        <div class="input-mekit align-end">
+          <ion-list>
+            <ion-item>
+              <ion-select placeholder="Choisir votre secteur d’activité">
+                <ion-select-option value="Service">Service</ion-select-option>
+                <ion-select-option value="Bien etre">Bien etre</ion-select-option>
+                <ion-select-option value="Accessoires">Accessoires</ion-select-option>
+                <ion-select-option value="Vestimentaire">Vestimentaire</ion-select-option>
+                <ion-select-option value="Vestimentaire">Appareil</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </div>
+      </div>
+    </div>
+
+    <div class="infos-1">
+      <div class="input">
+        <div class="label">Upload your trade </div>
+        <div class="label"> register (.pdf)<span class="red">*</span> </div>
+        <div class="import-doc">
+          <img src="../../../assets/upload-doc.svg" alt="" srcset="">
+
+          <span class="doc-name">your trade register (.pdf)</span>
+        </div>
+      </div>
+      <div class="input">
+        <div class="label">Upload your logo</div>
+        <div class="label"> logo<span class="red">*</span> </div>
+        <div class="import-doc">
+          <img src="../../../assets/upload-doc.svg" alt="" srcset="">
+
+          <span class="doc-name">Your logo</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="id-element">
+      <div class="label">Upload  your National Identity card <span class="red">*</span> </div>
+      <div class="infos-1">
+        <div class="import-doc">
+          <img src="../../../assets/upload-doc.svg" alt="" srcset="">
+
+          <span class="doc-name">Front CNI</span>
+        </div>
+
+        <div class="import-doc">
+          <img src="../../../assets/upload-doc.svg" alt="" srcset="">
+
+          <span class="doc-name">back CNI</span>
+        </div>
+      </div>
+      <div class="import-doc-lg">
+        <img src="../../../assets/upload-doc.svg" alt="" srcset="">
+        
+        <span class="doc-name">your trade register (.pdf)</span>
+      </div>
+      
+
+
+    </div>
+
+    <div class="btn">
+      <ion-button (click)="register()">Create</ion-button>
+
+    </div>
+      
+
+    
+
+  </div>
+</ion-content>

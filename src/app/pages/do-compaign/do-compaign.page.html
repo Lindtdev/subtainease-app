@@ -1,0 +1,49 @@
+<ion-content [fullscreen]="true">
+  <div class="content">
+    <div class="header-page">
+      <img src="../../../assets/logoLight.svg" alt="">
+      <div class="title">Create a campaign</div>
+      <div class="description">Boost your product by filling this form and valid</div>
+    </div>
+
+    <div class="form">
+      <div class="title-2">Choose the ad(s) you want to launch the campaign for</div>
+
+      <div class="input" *ngFor="let ad of ads; let i = index">
+        <div class="label">Chose ad <span class="red">*</span></div>
+        <div class="input-mekit align-end">
+          <ion-list>
+            <ion-item>
+              <ion-select placeholder="Choisir votre secteur d’activité" (ionChange)="updateAd(i, $event.detail.value)">
+                <ion-select-option value="Service">Service</ion-select-option>
+                <ion-select-option value="Bien etre">Bien etre</ion-select-option>
+                <ion-select-option value="Accessoires">Accessoires</ion-select-option>
+                <ion-select-option value="Vestimentaire">Vestimentaire</ion-select-option>
+                <ion-select-option value="Appareil">Appareil</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </div>
+        <div *ngIf="ads.length > 1">
+          <div class="title-3" (click)="removeAd(i)">-</div>
+        </div>
+      </div>
+
+      <!-- Bouton + en dehors de la boucle -->
+      <div class="add-btn" *ngIf="ads.length === 0 || (ads.length > 0 && ads.length === ads.length)" (click)="addAd()">
+        <div class="title-3">+</div>
+      </div>
+
+      <div class="input">
+        <div class="label">Campaign days</div>
+        <div class="input-mekit">
+          <ion-input color="warning" placeholder="1,2,3"></ion-input>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn">
+      <ion-button>Create campaign</ion-button>
+    </div>
+  </div>
+</ion-content>

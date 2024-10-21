@@ -1,0 +1,122 @@
+<!-- page profil -->
+<!-- <ion-content [fullscreen]="true">
+  <div class="content">
+    <app-mekit-button class="menu-bar"></app-mekit-button>
+
+    <div class="container">
+     <span>
+      <img src="../../../assets/Avatar.png" alt="" srcset="">
+     </span>
+     <div class="infos">
+      <span class="name">Albert Flores</span>
+      <div class="dd-flex">
+        <span class="email">albertfloresmail.com</span> 
+        <span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 0.5C3.86 0.5 0.5 3.86 0.5 8C0.5 12.14 3.86 15.5 8 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 8 0.5ZM8 14C4.6925 14 2 11.3075 2 8C2 4.6925 4.6925 2 8 2C11.3075 2 14 4.6925 14 8C14 11.3075 11.3075 14 8 14ZM11.4425 4.685L6.5 9.6275L4.5575 7.6925L3.5 8.75L6.5 11.75L12.5 5.75L11.4425 4.685Z" fill="#1FBE42"/>
+          </svg>
+       </span>
+      </div>
+     
+
+     </div>
+
+     <div class="edit-btn">
+      <ion-button >Edit Profile</ion-button>
+     
+    </div>
+
+    <div class="desc">
+
+      <div class="slots">
+        <div class="slot active-slot">
+          About
+        </div>
+        <div class="slot">
+          Publicités
+        </div>
+        <div class="slot">
+          Statistiques
+        </div>
+      </div>
+
+      <div class="text">
+        Mekit is a mobile digital solution that offers the possibility, with over 90% viability, of transforming your prospects into your future customers through the power of recommendation, and of gaining profits from product and goods recommendations.
+      </div>
+
+      <div class="text">
+        Make Pub your prospects into your future customers through the power of recommendation, and of gaining profits from product and goods recommendations.
+      </div>
+
+      <div class="text">
+       Make statistique through the power of recommendation, and of gaining profits from product and goods recommendations.
+      </div>
+    </div>
+
+
+
+
+    </div>
+   
+
+      
+
+    
+    <div class="footer-form">
+      <ion-button >LogOut</ion-button>
+     
+    </div>
+  </div>
+
+</ion-content> -->
+
+
+
+
+<ion-content [fullscreen]="true">
+  <div class="content">
+    <app-mekit-button class="menu-bar"></app-mekit-button>
+
+    <div class="container">
+      <span>
+        <img src="../../../assets/Avatar.png" alt="">
+      </span>
+      <div class="infos">
+        <span class="name">Albert Flores</span>
+        <div class="dd-flex">
+          <span class="email">albertfloresmail.com</span> 
+          <span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 0.5C3.86 0.5 0.5 3.86 0.5 8C0.5 12.14 3.86 15.5 8 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 8 0.5ZM8 14C4.6925 14 2 11.3075 2 8C2 4.6925 4.6925 2 8 2C11.3075 2 14 4.6925 14 8C14 11.3075 11.3075 14 8 14ZM11.4425 4.685L6.5 9.6275L4.5575 7.6925L3.5 8.75L6.5 11.75L12.5 5.75L11.4425 4.685Z" fill="#1FBE42"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="edit-btn">
+        <ion-button>Edit Profile</ion-button>
+      </div>
+
+      <div class="desc">
+        <div class="slots">
+          <div class="slot" [class.active-slot]="activeSlot === 'About'" (click)="setActiveSlot('About')">
+            About
+          </div>
+          <div class="slot" [class.active-slot]="activeSlot === 'Publicités'" (click)="setActiveSlot('Publicités')">
+            Publicités
+          </div>
+          <div class="slot" [class.active-slot]="activeSlot === 'Statistiques'" (click)="setActiveSlot('Statistiques')">
+            Statistiques
+          </div>
+        </div>
+
+        <!-- Contenu dynamique -->
+        <div class="text">{{ getContent() }}</div>
+      </div>
+    </div>
+
+    <div class="footer-form">
+      <ion-button>LogOut</ion-button>
+    </div>
+  </div>
+</ion-content>

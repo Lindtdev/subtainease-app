@@ -1,0 +1,39 @@
+<ion-content [fullscreen]="true">
+  <div class="content d-flex">
+    <div class="form">
+     
+
+      <div class="text-head-form">
+        <h1 class="title">Verification Code</h1>
+        <div class="text"> 
+          <div class="">We have sent the verification</div>
+          <div class="">code to your email address</div>
+        </div>
+      </div>
+
+      <div class="element-form">
+        <div class="input-mekit">
+        
+        </div>
+
+        <div *ngIf="timer != 0" class="text">
+          Time  <span>{{ timer }}s</span>
+        </div>
+        <div *ngIf="timer === 0" class="text" (click)="startTimer()">
+          Resent  <span>{{ timer }}s</span>
+        </div>
+
+      </div>
+
+      <div class="footer-form">
+        <ion-button (click)="redirectToConfirmCode()">Continue</ion-button>
+       
+      </div>
+    </div>
+    <div class="bas">
+      <img src="../../../assets/basVert.png" alt="" srcset="" />
+    </div>
+  </div>
+</ion-content>
+
+
