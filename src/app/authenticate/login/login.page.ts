@@ -5,6 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonList, IonIte
 import { addIcons } from 'ionicons';
 import { eye, lockClosed } from 'ionicons/icons';
 import { Router, RouterModule } from '@angular/router';
+import { LoaderService } from 'src/services/loader.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,8 @@ import { Router, RouterModule } from '@angular/router';
 export class LoginPage implements OnInit {
   
   constructor(
-    private router: Router
+    private router: Router,
+    private loaderService: LoaderService
   ) {
     addIcons({ eye, lockClosed });
     
@@ -26,7 +28,10 @@ export class LoginPage implements OnInit {
   }
 
   login(){
-    this.router.navigate(['app/home']);
+    // this.router.navigate(['app/home']);
+    this.loaderService.presentLoading('Loading...').then(() => {
+      this.router.navigate(['app/home']);
+    });
 
   }
 

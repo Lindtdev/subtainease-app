@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 import { MekitButtonComponent } from 'src/app/components/mekit-button/mekit-button.component';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab4',
@@ -17,11 +18,16 @@ export class Tab4Page implements OnInit {
 
   // Méthode pour changer le slot actif
  
-  constructor() { }
+  constructor( private router: Router,) { }
 
   ngOnInit() {
   }
-
+  redirectToLogin(){
+    this.router.navigate(['/auth/login']);
+  }
+  redirectToAd(){
+    this.router.navigate(['/app/publish']);
+  }
   setActiveSlot(slot: string) {
     this.activeSlot = slot;
   }
@@ -31,7 +37,7 @@ export class Tab4Page implements OnInit {
     switch (this.activeSlot) {
       case 'About':
         return 'Mekit is a mobile digital solution that offers the possibility, with over 90% viability, of transforming your prospects into your future customers through the power of recommendation, and of gaining profits from product and goods recommendations.';
-      case 'Publicités':
+      case 'Politiques':
         return 'Make Pub your prospects into your future customers through the power of recommendation, and of gaining profits from product and goods recommendations.';
       case 'Statistiques':
         return 'Make statistique through the power of recommendation, and of gaining profits from product and goods recommendations.';

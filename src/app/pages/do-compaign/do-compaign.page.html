@@ -1,49 +1,34 @@
 <ion-content [fullscreen]="true">
   <div class="content">
     <div class="header-page">
-      <img src="../../../assets/logoLight.svg" alt="">
-      <div class="title">Create a campaign</div>
-      <div class="description">Boost your product by filling this form and valid</div>
+      <img src="../../../assets/lologo.svg" alt="">
+      <div class="title">Reseigner votre  localisation</div>
     </div>
 
     <div class="form">
-      <div class="title-2">Choose the ad(s) you want to launch the campaign for</div>
+      <div class="title-2">Reseigner votre lieu de ramassage</div>
 
-      <div class="input" *ngFor="let ad of ads; let i = index">
-        <div class="label">Chose ad <span class="red">*</span></div>
-        <div class="input-mekit align-end">
-          <ion-list>
-            <ion-item>
-              <ion-select placeholder="Choisir votre secteur d’activité" (ionChange)="updateAd(i, $event.detail.value)">
-                <ion-select-option value="Service">Service</ion-select-option>
-                <ion-select-option value="Bien etre">Bien etre</ion-select-option>
-                <ion-select-option value="Accessoires">Accessoires</ion-select-option>
-                <ion-select-option value="Vestimentaire">Vestimentaire</ion-select-option>
-                <ion-select-option value="Appareil">Appareil</ion-select-option>
-              </ion-select>
-            </ion-item>
-          </ion-list>
-        </div>
-        <div *ngIf="ads.length > 1">
-          <div class="title-3" (click)="removeAd(i)">-</div>
-        </div>
-      </div>
+      <div class="input" >
+        <div class="label">location <span class="red">*</span></div>
+        
 
-      <!-- Bouton + en dehors de la boucle -->
-      <div class="add-btn" *ngIf="ads.length === 0 || (ads.length > 0 && ads.length === ads.length)" (click)="addAd()">
-        <div class="title-3">+</div>
-      </div>
-
-      <div class="input">
-        <div class="label">Campaign days</div>
         <div class="input-mekit">
-          <ion-input color="warning" placeholder="1,2,3"></ion-input>
+          <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.0695 28.2099C13.9244 28.2106 13.7806 28.1854 13.6463 28.1357C13.5119 28.0859 13.3897 28.0126 13.2867 27.9199L4.89621 20.2999C3.64121 19.2176 2.63771 17.9185 1.94487 16.4791C1.25202 15.0396 0.883831 13.4889 0.861994 11.9184C0.840157 10.3479 1.16511 8.78931 1.81772 7.33447C2.47032 5.87963 3.43737 4.55796 4.66189 3.44735C5.88641 2.33674 7.34363 1.45965 8.94768 0.867755C10.5517 0.275858 12.2702 -0.0188699 14.0018 0.000935904C15.7334 0.0207417 17.4431 0.354681 19.0302 0.983077C20.6173 1.61147 22.0496 2.52162 23.2429 3.65988C24.4484 4.75206 25.4047 6.04903 26.0571 7.47663C26.7096 8.90424 27.0455 10.4345 27.0455 11.9799C27.0455 13.5253 26.7096 15.0555 26.0571 16.4831C25.4047 17.9107 24.4484 19.2077 23.2429 20.2999L14.8524 27.9199C14.7493 28.0126 14.6272 28.0859 14.4928 28.1357C14.3585 28.1854 14.2147 28.2106 14.0695 28.2099ZM14.0695 2.20988C11.9385 2.20926 9.8552 2.78193 8.08311 3.85542C6.31102 4.92892 4.9298 6.45502 4.11421 8.24064C3.29861 10.0263 3.08528 11.9912 3.50121 13.8868C3.91714 15.7824 4.94363 17.5235 6.45083 18.8899L14.0695 25.7999L21.6883 18.8899C23.1955 17.5235 24.222 15.7824 24.6379 13.8868C25.0538 11.9912 24.8405 10.0263 24.0249 8.24064C23.2093 6.45502 21.8281 4.92892 20.056 3.85542C18.2839 2.78193 16.2006 2.20926 14.0695 2.20988Z" fill="#FC7901"/>
+            <path d="M14.0696 16.21C12.9793 16.21 11.9134 15.9167 11.0068 15.3673C10.1002 14.8179 9.39366 14.037 8.9764 13.1234C8.55915 12.2098 8.44998 11.2044 8.66269 10.2345C8.87541 9.26461 9.40045 8.37369 10.1714 7.67443C10.9424 6.97517 11.9247 6.49896 12.9941 6.30604C14.0635 6.11311 15.1719 6.21213 16.1793 6.59057C17.1866 6.969 18.0476 7.60987 18.6533 8.43211C19.2591 9.25436 19.5824 10.2211 19.5824 11.21C19.5824 12.536 19.0016 13.8078 17.9677 14.7455C16.9339 15.6832 15.5317 16.21 14.0696 16.21ZM14.0696 8.20996C13.4154 8.20996 12.7759 8.38591 12.2319 8.71556C11.688 9.0452 11.264 9.51374 11.0137 10.0619C10.7633 10.6101 10.6978 11.2133 10.8254 11.7952C10.9531 12.3772 11.2681 12.9117 11.7307 13.3313C12.1933 13.7508 12.7827 14.0366 13.4243 14.1523C14.0659 14.2681 14.731 14.2087 15.3354 13.9816C15.9398 13.7545 16.4564 13.37 16.8198 12.8767C17.1833 12.3833 17.3773 11.8033 17.3773 11.21C17.3773 10.4143 17.0288 9.65125 16.4085 9.08864C15.7882 8.52603 14.9468 8.20996 14.0696 8.20996Z" fill="#FC7901"/>
+            </svg>
+          <ion-input aria-label="location" color="warning" placeholder="location"></ion-input>
+  
         </div>
+      
       </div>
+
     </div>
 
     <div class="btn">
-      <ion-button>Create campaign</ion-button>
+      <ion-button (click)="showLoader()">Submit</ion-button> 
     </div>
+
+
   </div>
 </ion-content>

@@ -63,7 +63,35 @@ export const routes: Routes = [
           import('../pages/recommanded-post/recommanded-post.page').then((m) => m.RecommandedPostPage),
       },
  
-      
+      {
+        path: 'maping',
+        loadComponent: () =>
+          import('../pages/maping/maping.page').then((m) => m.MapingPage),
+      },
+      {
+        path: 'recyclage-list',
+        loadComponent: () =>
+          import('../pages/listes-recyclages/listes-recyclages.page').then((m) => m.ListesRecyclagesPage),
+      },
+      {
+        path: 'liste-points',
+        loadComponent: () =>
+          import('../pages/liste-points/liste-points.page').then((m) => m.ListePointsPage),
+      },
+      {
+        path: 'liste-details',
+        loadComponent: () =>
+          import('../pages/liste-details/liste-details.page').then((m) => m.ListeDetailsPage),
+      },
+
+      // {
+  //   path: 'liste-points',
+  //   loadComponent: () => import('./pages/liste-points/liste-points.page').then( m => m.ListePointsPage)
+  // },
+  // {
+  //   path: 'liste-details',
+  //   loadComponent: () => import('./pages/liste-details/liste-details.page').then( m => m.ListeDetailsPage)
+  // },
     ],
   },
 

@@ -1,5 +1,7 @@
 {
   "name": "mekitApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular-standalone"
 }

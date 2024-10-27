@@ -15,7 +15,7 @@
  
   
   ion-content{
-    --background:#436A02 ; 
+    --background:white
   }
 
   ion-input{
@@ -35,6 +35,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
   }
   

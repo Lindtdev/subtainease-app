@@ -2,6 +2,8 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton } from '@ionic/angular/standalone';
+import { LoaderService } from 'src/services/loader.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-do-compaign',
@@ -14,7 +16,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton } from '@ionic/a
 export class DoCompaignPage implements OnInit {
   ads: string[] = ['']; // Tableau pour stocker les valeurs des annonces
 
-  constructor() { }
+  constructor(private loaderService: LoaderService,private router:Router) { }
 
   ngOnInit() {
   }
@@ -26,12 +28,19 @@ export class DoCompaignPage implements OnInit {
 
   removeAd(index: number) {
     if (this.ads.length > 1) {
-      this.ads.splice(index, 1); // Supprime l'élément à l'index donné
+      this.ads.splice(index, 1); 
     }
   }
 
   updateAd(index: number, value: string) {
-    this.ads[index] = value; // Met à jour la valeur de l'annonce
+    this.ads[index] = value; 
+  }
+
+  showLoader() {
+    this.loaderService.presentLoading('Loading...').then(() => {
+      this.router.navigate(['/app/liste-points']);
+    });
+   
   }
 
 }
